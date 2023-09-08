@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Book Seats</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="left">
+            <div class="logo">
+              <span> Book My Seats</span> 
+            </div>
+
+        </div>
+        <div class="middle">
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+
+
+        </div>
+        <div class="right">
+            <div class="icon">
+                <img src="assets/calendar.png" alt="Icon 1">
+            </div>
+            <div class="icon">
+                <img src="assets/notification.png" alt="Icon 2">
+            </div>
+            <div class="icon profile">
+                <div class="profile-circle">JD</div>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Hero Section -->
+     <header class="hero">
+        <div class="container">
+            <h2>Welcome to Book My Seats</h2>
+            <p>Reserve your workspace in one click !</p>
+            <a href="#" class="btn-book">Book Tickets</a>
+        </div>
+    </header>
+
+<!-- Section with 4 Subsections -->
+<section class="info-section">
+    <div class="container">
+       
+          <!-- Book Seats Card with Form -->
+          <div class="info-subsection book-seats-card">
+            <h3>Book Seats</h3>
+            <!-- Booking Form -->
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="seats">Number of Seats:</label>
+                <input type="number" id="seats" name="seats" required>
+                <button type="submit" class="btn-book">Book Now</button>
+            </form>
+        </div>
+        <div class="info-subsection reservations-card">
+            <h3>Your Reservation</h3>
+
+            <div class="reservation">
+                    <p>Location: Event Name 1</p>
+                    <p>Workspace: June 15, 2023</p>
+                    <p>Seat Number: A12</p>
+                    <p>Date: A12</p>
+                    <!-- Add more reservation details as needed -->
+            </div>
+        </div>
+        <div class="info-subsection">
+            <h3>Announcements</h3>
+            <p>Stay updated with the latest event announcements.</p>
+        </div>
+        <div class="info-subsection">
+            <h3>Events</h3>
+            <p>Explore our upcoming events and activities.</p>
+        </div>
+    </div>
+</section>
+
+</body>
+
+</html>
