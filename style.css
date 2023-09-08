@@ -1,4 +1,4 @@
-/* styles.css */
+/* style.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
 body {
@@ -23,7 +23,6 @@ body {
 
 .logo{
     width: 220px;
-    /* Adjust the width as needed */
     height: auto;
     color: #000000;
     font-size: 25px;
@@ -35,7 +34,7 @@ body {
     flex-grow: 1;
     text-align: center;
     position: relative;
-    /* Add this to create a relative positioning context */
+    
 }
 
 
@@ -47,14 +46,13 @@ input[type="text"] {
     outline: none;
     border-radius: 25px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    /* Add a subtle shadow */
+
     transition: box-shadow 0.3s ease;
-    /* Smooth transition for the shadow */
 }
 
 input[type="text"]:focus {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    /* Increase shadow on focus for an elegant effect */
+
 }
 
 
@@ -67,10 +65,6 @@ input[type="text"]:focus {
     margin-left: 30px;
 }
 
-
-/* styles.css */
-
-/* ... (previous CSS code) ... */
 
 
 .profile {
@@ -96,10 +90,10 @@ input[type="text"]:focus {
 
 /* Hero Section Styles */
 .hero {
-    background-image: url('assets/hero-bg.jpg'); /* Replace with your hero image URL */
-    background-size: cover; /* Cover the entire container */
-    background-repeat: no-repeat; /* Prevent image repetition */
-    background-position: center center; /* Center the image horizontally and vertically */
+    background-image: url('assets/hero-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center center;
     color: white;
     text-align: center;
     padding: 150px 0;
@@ -120,7 +114,7 @@ input[type="text"]:focus {
 .hero h2 {
     font-size: 48px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
 
 .hero p {
@@ -131,7 +125,7 @@ input[type="text"]:focus {
 .btn-book {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #ff5733; /* Customize the button color */
+    background-color: #ff5733;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -141,12 +135,14 @@ input[type="text"]:focus {
 }
 
 .btn-book:hover {
-    background-color: #ff8c66; /* Customize the button hover color */
+    background-color: #ff8c66; 
 }
+
+
 /* Info Section Styles */
 .info-section {
-    background-color: #f9f9f9; /* Background color for the info section */
-    /* padding: 50px 0; */
+    background-color: #f9f9f9;
+    padding: 50px 0;
 }
 
 .info-section .container {
@@ -156,7 +152,7 @@ input[type="text"]:focus {
 }
 
 .info-subsection {
-    width: calc(50% - 50px); /* Two cards in a row, with some spacing */
+    width: calc(50% - 50px); 
     background-color: white;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -166,7 +162,7 @@ input[type="text"]:focus {
 
 .info-icon {
     font-size: 40px;
-    color: #ff5733; /* Icon color */
+    color: #ff5733; 
 }
 
 .info-subsection h3 {
@@ -213,9 +209,10 @@ input[type="text"]:focus {
 .book-seats-card button.btn-book:hover {
     background-color: #ff8c66;
 }
+
 /* Your Reservations Section Styles */
 .reservations-card {
-    background: linear-gradient(to bottom, #ff5733, #ff8c66); /* Gradient background */
+    background: linear-gradient(to bottom, #ff5733, #ff8c66); 
     color: white;    
 }
 
