@@ -25,14 +25,17 @@
 
         </div>
         <div class="right">
+            <div class="icon" style="cursor: pointer;" id="openModalBtn">
+                Add Events/Announcements
+            </div>
             <div class="icon">
                 <img src="assets/calendar.png" alt="Icon 1">
             </div>
             <div class="icon">
                 <img src="assets/notification.png" alt="Icon 2">
             </div>
-            <div class="icon profile">
-                <div class="profile-circle">JD</div>
+            <div class="icon profile" onclick="toggleProfileSidebar()">
+                <div class="profile-circle" id="initials"></div>
             </div>
         </div>
     </nav>
@@ -49,42 +52,130 @@
     <!-- Section with 4 Subsections -->
     <section class="info-section">
         <div class="container">
-
-            <!-- Book Seats Card with Form -->
             <div class="info-subsection book-seats-card">
                 <h3>Book Seats</h3>
                 <!-- Booking Form -->
-                <form>
+                <form id="bookingForm">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
-                    <label for="email">Employee ID:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="seats">Number of Seats:</label>
-                    <input type="number" id="seats" name="seats" required>
+                    <label for="empid">Employee ID:</label>
+                    <input type="text" id="empid" name="empid" required>
+                    <label for="floor">Select Floor:</label>
+                    <select id="floor">
+                        <option value="KP Building, 3rd Floor">KP Building, 3rd Floor</option>
+                        <option value="KP Building, 4th Floor">KP Building, 4th Floor</option>
+                        <option value="KP Building, 6th Floor">KP Building, 6th Floor</option>
+                    </select>
+                    <label for="empid">From:</label>
+                    <input type="date" id="startDate" name="startDate" required>
+                    <label for="empid">To:</label>
+                    <input type="date" id="endDate" name="endDate" required>
+
                     <button type="submit" class="btn-book">Book Now</button>
                 </form>
             </div>
             <div class="info-subsection reservations-card">
-                <h3>Your Reservation</h3>
+                <h3>Today's Reservation</h3>
+
+                <div class="reservation" id="todays_reservation">
+                    
+                </div>
+                <h3>Past Reservations</h3>
 
                 <div class="reservation">
-                    <p><span style="font-weight: bold;">Location:</span> KP Building Floor 3</p>
-                    <p><span style="font-weight: bold;">Workspace:</span> Single Desk</p>
-                    <p><span style="font-weight: bold;">Seat Number:</span> 5612</p>
-                    <p><span style="font-weight: bold;">Date:</span> 08/09/2023 - 12/09/2023</p>
-                    <!-- Add more reservation details as needed -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Location</th>
+                                <th>Seat No</th>
+                                <th>Dates</th>
+                            </tr>
+                        </thead>
+                        <tbody id="past-bookings">
+
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="info-subsection">
                 <h3>Announcements</h3>
-                <p>Stay updated with the latest event announcements.</p>
+                <div id="messages_notification">
+                  
+                </div>
+               
             </div>
             <div class="info-subsection">
                 <h3>Events</h3>
-                <p>Explore our upcoming events and activities.</p>
+                 <div id="news_notification">
+
+                 </div>
             </div>
         </div>
     </section>
+
+    <!-- The profile details sidebar -->
+    <div class="sidebar" id="profileSidebar">
+        <span class="close-button" onclick="toggleProfileSidebar()">Close X</span>
+        <div class="sidebar-content">
+            <h2>Edit Profile Details</h2>
+            <form id="profileUpdate">
+                <label for="name">Name:</label>
+                <input type="text" id="pname" name="pname" required>
+                <label for="empid">Employee ID:</label>
+                <input type="text" id="pempid" name="pempid" required>
+                <label for="empid">Designation:</label>
+                <input type="text" id="pdesignation" name="pdesignation" required>
+                <label for="empid">Department:</label>
+                <input type="text" id="pdept" name="pdept" required>
+                <button type="submit" class="btn-book">Update Profile</button>
+            </form>
+
+            <h3>Past Reservations</h3>
+
+            <div class="reservation">
+                <table style="color: black;">
+                    <thead>
+                        <tr>
+                            <th>Location</th>
+                            <th>Seat No</th>
+                            <th>Dates</th>
+                        </tr>
+                    </thead>
+                    <tbody id="profile-past-bookings">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>Send Announcements/News</h2>
+            <form id="notification">
+
+                <label for="message_type">Select :</label>
+                <select id="message_type">
+                    <option value="Announcement">Announcement</option>
+                    <option value="News">Events</option>
+                </select>
+
+                <textarea name="message" id="message" cols="30" rows="10">Write Something here</textarea>
+
+                <button type="submit" id="submitBtn">Send Notification</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- The overlay element -->
+    <div class="overlay" id="overlay" onclick="closeOverlay()"></div>
+
+
+    <script src="scripts.js"></script>
 
 </body>
 
